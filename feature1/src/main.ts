@@ -5,10 +5,9 @@ import { AppModule } from './app.module';
 
 const logger = new Logger('main');
 const microserviceOptions = {
-  transport: Transport.TCP,
+  transport: Transport.REDIS,
   options:{
-    host:'127.0.0.1',
-    port:8080
+    url: 'redis://localhost:6379',
   }
  }
 async function bootstrap() {
